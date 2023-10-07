@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Scoring.Score do
+defmodule LVLUp.Scoring.Score do
   @moduledoc """
   # TODO: add docs
   """
@@ -7,8 +7,8 @@ defmodule Rpgdemo.Scoring.Score do
 
   import Ecto.Changeset
 
-  alias Rpgdemo.Prompts.Prompt
-  alias Rpgdemo.Skills.SkillCategory
+  alias LVLUp.Prompts.Prompt
+  alias LVLUp.Skills.SkillCategory
 
   @fields [:number, :prompt_id, :skill_category_id]
 

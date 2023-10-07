@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :rpgdemo,
-  ecto_repos: [Rpgdemo.Repo]
+config :lvlup,
+  ecto_repos: [LVLUp.Repo]
 
 # Configures the endpoint
-config :rpgdemo, RpgdemoWeb.Endpoint,
+config :lvlup, LVLUpWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: RpgdemoWeb.ErrorHTML, json: RpgdemoWeb.ErrorJSON],
+    formats: [html: LVLUpWeb.ErrorHTML, json: LVLUpWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Rpgdemo.PubSub,
+  pubsub_server: LVLUp.PubSub,
   live_view: [signing_salt: "M2gjd8r0"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :rpgdemo, RpgdemoWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :rpgdemo, Rpgdemo.Mailer, adapter: Swoosh.Adapters.Local
+config :lvlup, LVLUp.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configure esbuild (the version is required)
 config :esbuild,
@@ -59,8 +59,8 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-config :rpgdemo, Oban,
-  repo: Rpgdemo.Repo,
+config :lvlup, Oban,
+  repo: LVLUp.Repo,
   plugins: [Oban.Plugins.Pruner],
   queues: [default: 10]
 

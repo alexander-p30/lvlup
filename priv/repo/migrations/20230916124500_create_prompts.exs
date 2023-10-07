@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Repo.Migrations.CreatePrompts do
+defmodule LVLUp.Repo.Migrations.CreatePrompts do
   use Ecto.Migration
 
   def change do

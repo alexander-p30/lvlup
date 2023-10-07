@@ -1,12 +1,12 @@
-defmodule Rpgdemo.Prompts do
+defmodule LVLUp.Prompts do
   @moduledoc """
   The Skills context.
   """
 
   import Ecto.Query, warn: false
 
-  alias Rpgdemo.Repo
-  alias Rpgdemo.Prompts.Prompt
+  alias LVLUp.Repo
+  alias LVLUp.Prompts.Prompt
 
   @doc """
   Returns the list of prompts.

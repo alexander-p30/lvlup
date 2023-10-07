@@ -1,7 +1,7 @@
-defmodule RpgdemoWeb.PromptLive.FormComponent do
-  use RpgdemoWeb, :live_component
+defmodule LVLUpWeb.PromptLive.FormComponent do
+  use LVLUpWeb, :live_component
 
-  alias Rpgdemo.Prompts
+  alias LVLUp.Prompts
 
   @impl true
   def render(assigns) do

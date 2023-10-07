@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Skills.SkillCategory do
+defmodule LVLUp.Skills.SkillCategory do
   @moduledoc """
   # TODO: add docs
   """
@@ -7,7 +7,7 @@ defmodule Rpgdemo.Skills.SkillCategory do
 
   import Ecto.Changeset
 
-  alias Rpgdemo.Skills.SkillCategoryStatus
+  alias LVLUp.Skills.SkillCategoryStatus
 
   @fields [:title, :color, :description, :status]
   @six_digit_hex_color ~R/^#([A-F0-9]{6})$/

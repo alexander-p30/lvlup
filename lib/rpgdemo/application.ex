@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Application do
+defmodule LVLUp.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,22 +9,22 @@ defmodule Rpgdemo.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      RpgdemoWeb.Telemetry,
+      LVLUpWeb.Telemetry,
       # Start the Ecto repository
-      Rpgdemo.Repo,
+      LVLUp.Repo,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Rpgdemo.PubSub},
+      {Phoenix.PubSub, name: LVLUp.PubSub},
       # Start Finch
-      {Finch, name: Rpgdemo.Finch},
+      {Finch, name: LVLUp.Finch},
       # Start the Endpoint (http/https)
-      RpgdemoWeb.Endpoint
-      # Start a worker by calling: Rpgdemo.Worker.start_link(arg)
-      # {Rpgdemo.Worker, arg}
+      LVLUpWeb.Endpoint
+      # Start a worker by calling: LVLUp.Worker.start_link(arg)
+      # {LVLUp.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Rpgdemo.Supervisor]
+    opts = [strategy: :one_for_one, name: LVLUp.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -32,7 +32,7 @@ defmodule Rpgdemo.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    RpgdemoWeb.Endpoint.config_change(changed, removed)
+    LVLUpWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

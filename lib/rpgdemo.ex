@@ -1,6 +1,6 @@
-defmodule Rpgdemo do
+defmodule LVLUp do
   @moduledoc """
-  Rpgdemo keeps the contexts that define your domain
+  LVLUp keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless
@@ -9,7 +9,7 @@ defmodule Rpgdemo do
 
   @spec fetch_env!([atom()]) :: any()
   def fetch_env!([first_key | path]) do
-    Enum.reduce(path, Application.fetch_env!(:rpgdemo, first_key), fn key, env ->
+    Enum.reduce(path, Application.fetch_env!(:lvlup, first_key), fn key, env ->
       Keyword.fetch!(key, env)
     end)
   end

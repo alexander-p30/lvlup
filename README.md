@@ -1,4 +1,4 @@
-# Rpgdemo
+# LVLUp
 
 To start your Phoenix server:
 

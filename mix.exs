@@ -1,9 +1,9 @@
-defmodule Rpgdemo.MixProject do
+defmodule LVLUp.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :rpgdemo,
+      app: :lvlup,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule Rpgdemo.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Rpgdemo.Application, []},
+      mod: {LVLUp.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

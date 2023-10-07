@@ -1,9 +1,9 @@
-defmodule RpgdemoWeb.PromptLive.Index do
-  use RpgdemoWeb, :live_view
+defmodule LVLUpWeb.PromptLive.Index do
+  use LVLUpWeb, :live_view
 
-  alias Rpgdemo.Prompts
-  alias Rpgdemo.Prompts.Prompt
-  alias Rpgdemo.Prompts.PromptStatus
+  alias LVLUp.Prompts
+  alias LVLUp.Prompts.Prompt
+  alias LVLUp.Prompts.PromptStatus
 
   @impl true
   def mount(_params, _session, socket) do
@@ -35,7 +35,7 @@ defmodule RpgdemoWeb.PromptLive.Index do
   end
 
   @impl true
-  def handle_info({RpgdemoWeb.PromptLive.FormComponent, {:saved, prompt}}, socket) do
+  def handle_info({LVLUpWeb.PromptLive.FormComponent, {:saved, prompt}}, socket) do
     {:noreply, stream_insert(socket, :prompts, prompt)}
   end
 

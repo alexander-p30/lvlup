@@ -1,12 +1,12 @@
-defmodule RpgdemoWeb.ErrorJSONTest do
-  use RpgdemoWeb.ConnCase, async: true
+defmodule LVLUpWeb.ErrorJSONTest do
+  use LVLUpWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert RpgdemoWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert LVLUpWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
   end
 
   test "renders 500" do
-    assert RpgdemoWeb.ErrorJSON.render("500.json", %{}) ==
+    assert LVLUpWeb.ErrorJSON.render("500.json", %{}) ==
              %{errors: %{detail: "Internal Server Error"}}
   end
 end

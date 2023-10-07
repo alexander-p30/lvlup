@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Repo.Migrations.AddObanJobsTable do
+defmodule LVLUp.Repo.Migrations.AddObanJobsTable do
   use Ecto.Migration
 
   def change do

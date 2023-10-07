@@ -1,12 +1,12 @@
-defmodule RpgdemoWeb do
+defmodule LVLUpWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use RpgdemoWeb, :controller
-      use RpgdemoWeb, :html
+      use LVLUpWeb, :controller
+      use LVLUpWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -40,10 +40,10 @@ defmodule RpgdemoWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: RpgdemoWeb.Layouts]
+        layouts: [html: LVLUpWeb.Layouts]
 
       import Plug.Conn
-      import RpgdemoWeb.Gettext
+      import LVLUpWeb.Gettext
 
       unquote(verified_routes())
     end
@@ -52,7 +52,7 @@ defmodule RpgdemoWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {RpgdemoWeb.Layouts, :app}
+        layout: {LVLUpWeb.Layouts, :app}
 
       unquote(html_helpers())
     end
@@ -84,8 +84,8 @@ defmodule RpgdemoWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import RpgdemoWeb.CoreComponents
-      import RpgdemoWeb.Gettext
+      import LVLUpWeb.CoreComponents
+      import LVLUpWeb.Gettext
 
       # Shortcut for generating JS commands
       alias Phoenix.LiveView.JS
@@ -98,9 +98,9 @@ defmodule RpgdemoWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: RpgdemoWeb.Endpoint,
-        router: RpgdemoWeb.Router,
-        statics: RpgdemoWeb.static_paths()
+        endpoint: LVLUpWeb.Endpoint,
+        router: LVLUpWeb.Router,
+        statics: LVLUpWeb.static_paths()
     end
   end
 

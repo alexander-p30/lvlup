@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Prompts.PromptStatus do
+defmodule LVLUp.Prompts.PromptStatus do
   @moduledoc """
   # TODO: add docs
   """

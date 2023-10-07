@@ -1,3 +1,3 @@
-defmodule Rpgdemo.Mailer do
-  use Swoosh.Mailer, otp_app: :rpgdemo
+defmodule LVLUp.Mailer do
+  use Swoosh.Mailer, otp_app: :lvlup
 end

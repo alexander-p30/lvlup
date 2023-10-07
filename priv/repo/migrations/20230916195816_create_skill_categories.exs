@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Repo.Migrations.CreateSkillCategories do
+defmodule LVLUp.Repo.Migrations.CreateSkillCategories do
   use Ecto.Migration
 
   def change do

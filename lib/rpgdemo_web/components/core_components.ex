@@ -1,4 +1,4 @@
-defmodule RpgdemoWeb.CoreComponents do
+defmodule LVLUpWeb.CoreComponents do
   @moduledoc """
   Provides core UI components.
 
@@ -17,7 +17,7 @@ defmodule RpgdemoWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import RpgdemoWeb.Gettext
+  import LVLUpWeb.Gettext
 
   @doc """
   Renders a modal.
@@ -650,9 +650,9 @@ defmodule RpgdemoWeb.CoreComponents do
     # with our gettext backend as first argument. Translations are
     # available in the errors.po file (as we use the "errors" domain).
     if count = opts[:count] do
-      Gettext.dngettext(RpgdemoWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(LVLUpWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(RpgdemoWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(LVLUpWeb.Gettext, "errors", msg, opts)
     end
   end
 

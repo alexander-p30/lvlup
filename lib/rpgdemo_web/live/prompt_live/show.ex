@@ -1,7 +1,7 @@
-defmodule RpgdemoWeb.PromptLive.Show do
-  use RpgdemoWeb, :live_view
+defmodule LVLUpWeb.PromptLive.Show do
+  use LVLUpWeb, :live_view
 
-  alias Rpgdemo.Prompts
+  alias LVLUp.Prompts
 
   @impl true
   def mount(_params, _session, socket) do

@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Scoring.Engines.ChatGPT_3_5 do
+defmodule LVLUp.Scoring.Engines.ChatGPT_3_5 do
   @moduledoc """
   # TODO: add docs
   """

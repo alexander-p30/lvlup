@@ -1,5 +1,5 @@
-defmodule RpgdemoWeb.PageControllerTest do
-  use RpgdemoWeb.ConnCase
+defmodule LVLUpWeb.PageControllerTest do
+  use LVLUpWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")

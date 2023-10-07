@@ -1,11 +1,11 @@
-defmodule Rpgdemo.Scoring.EngineAnalysis do
+defmodule LVLUp.Scoring.EngineAnalysis do
   @moduledoc """
   # TODO: add docs
   """
   use TypedStruct
 
-  alias Rpgdemo.Prompts.Prompt
-  alias Rpgdemo.Scoring.Score
+  alias LVLUp.Prompts.Prompt
+  alias LVLUp.Scoring.Score
 
   typedstruct module: ScoreAnalysis do
     field :score, Score.t()

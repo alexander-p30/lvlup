@@ -1,5 +1,5 @@
-defmodule RpgdemoWeb.Layouts do
-  use RpgdemoWeb, :html
+defmodule LVLUpWeb.Layouts do
+  use LVLUpWeb, :html
 
   embed_templates "layouts/*"
 end

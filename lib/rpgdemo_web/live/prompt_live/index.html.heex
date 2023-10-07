@@ -4,7 +4,7 @@
 
 <div>
   <.live_component
-    module={RpgdemoWeb.PromptLive.FormComponent}
+    module={LVLUpWeb.PromptLive.FormComponent}
     id="new"
     action={:new}
     title="New prompt"
@@ -36,7 +36,7 @@
   on_cancel={JS.patch(~p"/prompts")}
 >
   <.live_component
-    module={RpgdemoWeb.PromptLive.FormComponent}
+    module={LVLUpWeb.PromptLive.FormComponent}
     id={@prompt.id || :new}
     title={@page_title}
     action={@live_action}

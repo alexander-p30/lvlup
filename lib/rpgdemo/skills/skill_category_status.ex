@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Skills.SkillCategoryStatus do
+defmodule LVLUp.Skills.SkillCategoryStatus do
   @moduledoc """
   # TODO: add docs
   """

@@ -1,5 +1,5 @@
-defmodule Rpgdemo.Repo do
+defmodule LVLUp.Repo do
   use Ecto.Repo,
-    otp_app: :rpgdemo,
+    otp_app: :lvlup,
     adapter: Ecto.Adapters.Postgres
 end

@@ -1,8 +1,8 @@
-defmodule RpgdemoWeb.PromptLiveTest do
-  use RpgdemoWeb.ConnCase
+defmodule LVLUpWeb.PromptLiveTest do
+  use LVLUpWeb.ConnCase
 
   import Phoenix.LiveViewTest
-  import Rpgdemo.PromptsFixtures
+  import LVLUp.PromptsFixtures
 
   @create_attrs %{text: "some text"}
   @update_attrs %{text: "some updated text"}

@@ -1,5 +1,5 @@
-defmodule RpgdemoWeb.PageController do
-  use RpgdemoWeb, :controller
+defmodule LVLUpWeb.PageController do
+  use LVLUpWeb, :controller
 
   def home(conn, _params) do
     # The home page is often custom made,

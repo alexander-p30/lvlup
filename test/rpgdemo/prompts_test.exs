@@ -1,12 +1,12 @@
-defmodule Rpgdemo.PromptsTest do
-  use Rpgdemo.DataCase
+defmodule LVLUp.PromptsTest do
+  use LVLUp.DataCase
 
-  alias Rpgdemo.Prompts
+  alias LVLUp.Prompts
 
   describe "prompts" do
-    alias Rpgdemo.Prompts.Prompt
+    alias LVLUp.Prompts.Prompt
 
-    import Rpgdemo.PromptsFixtures
+    import LVLUp.PromptsFixtures
 
     @invalid_attrs %{text: nil, status: :some_status}
 

@@ -1,10 +1,10 @@
-defmodule Rpgdemo.Scoring.Engine do
+defmodule LVLUp.Scoring.Engine do
   @moduledoc """
   # TODO: add docs
   """
 
-  alias Rpgdemo.Prompts.Prompt
-  alias Rpgdemo.Scoring.EngineAnalysis
+  alias LVLUp.Prompts.Prompt
+  alias LVLUp.Scoring.EngineAnalysis
 
   @callback analyse(Prompt.t()) :: EngineAnalysis.t()
 
@@ -12,5 +12,5 @@ defmodule Rpgdemo.Scoring.Engine do
   def call(%Prompt{} = prompt, engine \\ default_engine!()), do: engine.analyse(prompt)
 
   @spec default_engine! :: module()
-  defp default_engine!, do: Rpgdemo.fetch_env!([__MODULE__, :default_engine])
+  defp default_engine!, do: LVLUp.fetch_env!([__MODULE__, :default_engine])
 end

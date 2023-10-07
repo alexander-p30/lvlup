@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Repo.Migrations.CreateScores do
+defmodule LVLUp.Repo.Migrations.CreateScores do
   use Ecto.Migration
 
   def change do

@@ -1,4 +1,4 @@
-defmodule Rpgdemo.Prompts.Prompt do
+defmodule LVLUp.Prompts.Prompt do
   @moduledoc """
   # TODO: add docs
   """
@@ -7,9 +7,9 @@ defmodule Rpgdemo.Prompts.Prompt do
 
   import Ecto.Changeset
 
-  alias Rpgdemo.Prompts.PromptStatus
-  alias Rpgdemo.Scoring.Score
-  alias Rpgdemo.Skills.SkillCategoryStatus
+  alias LVLUp.Prompts.PromptStatus
+  alias LVLUp.Scoring.Score
+  alias LVLUp.Skills.SkillCategoryStatus
 
   @type t :: %__MODULE__{}
 

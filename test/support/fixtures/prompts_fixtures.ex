@@ -1,7 +1,7 @@
-defmodule Rpgdemo.PromptsFixtures do
+defmodule LVLUp.PromptsFixtures do
   @moduledoc """
   This module defines test helpers for creating
-  entities via the `Rpgdemo.Prompts` context.
+  entities via the `LVLUp.Prompts` context.
   """
 
   @doc """
@@ -12,7 +12,7 @@ defmodule Rpgdemo.PromptsFixtures do
     {:ok, prompt} =
       attrs
       |> Enum.into(%{text: "some text", status: :created})
-      |> Rpgdemo.Prompts.create_prompt()
+      |> LVLUp.Prompts.create_prompt()
 
     prompt
   end

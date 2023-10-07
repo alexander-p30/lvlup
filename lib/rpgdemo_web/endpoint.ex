@@ -1,12 +1,12 @@
-defmodule RpgdemoWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :rpgdemo
+defmodule LVLUpWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :lvlup
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_rpgdemo_key",
+    key: "_lvlup_key",
     signing_salt: "tvslMbPq",
     same_site: "Lax"
   ]
@@ -19,9 +19,9 @@ defmodule RpgdemoWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :rpgdemo,
+    from: :lvlup,
     gzip: false,
-    only: RpgdemoWeb.static_paths()
+    only: LVLUpWeb.static_paths()
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
@@ -29,7 +29,7 @@ defmodule RpgdemoWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :rpgdemo
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :lvlup
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -47,5 +47,5 @@ defmodule RpgdemoWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug RpgdemoWeb.Router
+  plug LVLUpWeb.Router
 end

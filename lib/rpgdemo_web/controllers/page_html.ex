@@ -1,5 +1,5 @@
-defmodule RpgdemoWeb.PageHTML do
-  use RpgdemoWeb, :html
+defmodule LVLUpWeb.PageHTML do
+  use LVLUpWeb, :html
 
   embed_templates "page_html/*"
 end
