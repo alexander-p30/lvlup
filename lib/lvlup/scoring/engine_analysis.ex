@@ -7,15 +7,15 @@ defmodule LVLUp.Scoring.EngineAnalysis do
   alias LVLUp.Prompts.Prompt
   alias LVLUp.Scoring.Score
 
-  typedstruct module: ScoreAnalysis do
-    field :score, Score.t()
-    field :metadata, map(), default: %{}
-  end
-
   typedstruct do
     field :prompt, Prompt.t()
     field :engine, module()
     field :metadata, map(), default: %{}
-    field :scores, [ScoreAnalysis.t()], default: []
+    field :score_analyses, [ScoreAnalysis.t()], default: []
+  end
+
+  typedstruct module: ScoreAnalysis do
+    field :score, Score.t()
+    field :metadata, map(), default: %{}
   end
 end

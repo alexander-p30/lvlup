@@ -3,8 +3,9 @@ defmodule LVLUp.Prompts.PromptStatus do
   # TODO: add docs
   """
 
-  def values, do: [created(), processed(), archived()]
+  def values, do: [created(), processing(), processed(), archived()]
   def created, do: :created
+  def processing, do: :processing
   def processed, do: :processed
   def archived, do: :archived
 end

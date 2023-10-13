@@ -31,3 +31,7 @@ config :logger, level: :warning
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :lvlup, Oban, testing: :inline
+
+config :lvlup, LVLUp.Scoring.Engine, default_engine: LVLUp.Scoring.Engines.EngineMock

@@ -10,7 +10,7 @@ defmodule LVLUp do
   @spec fetch_env!([atom()]) :: any()
   def fetch_env!([first_key | path]) do
     Enum.reduce(path, Application.fetch_env!(:lvlup, first_key), fn key, env ->
-      Keyword.fetch!(key, env)
+      Keyword.fetch!(env, key)
     end)
   end
 end

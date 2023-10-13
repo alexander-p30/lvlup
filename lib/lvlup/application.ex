@@ -17,9 +17,10 @@ defmodule LVLUp.Application do
       # Start Finch
       {Finch, name: LVLUp.Finch},
       # Start the Endpoint (http/https)
-      LVLUpWeb.Endpoint
+      LVLUpWeb.Endpoint,
       # Start a worker by calling: LVLUp.Worker.start_link(arg)
       # {LVLUp.Worker, arg}
+      {Oban, Application.fetch_env!(:lvlup, Oban)}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

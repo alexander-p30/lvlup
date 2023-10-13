@@ -51,7 +51,11 @@ defmodule LVLUp.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:typed_struct, "~> 0.3.0"},
-      {:oban, "~> 2.16"}
+      {:oban, "~> 2.16"},
+      {:ex_machina, "~> 2.7.0", only: :test},
+      {:faker, "~> 0.17", only: :test},
+      {:mox, "~> 1.0", only: :test},
+      {:assertions, "~> 0.19", only: :test}
     ]
   end
 

@@ -1,6 +1,6 @@
 defmodule LVLUp.Prompts do
   @moduledoc """
-  The Skills context.
+  The Prompts context.
   """
 
   import Ecto.Query, warn: false
@@ -17,8 +17,8 @@ defmodule LVLUp.Prompts do
       [%Prompt{}, ...]
 
   """
-  def list_prompts do
-    Repo.all(Prompt)
+  def list_prompts(preloads \\ []) do
+    Prompt |> preload(^preloads) |> Repo.all()
   end
 
   @doc """
@@ -35,7 +35,23 @@ defmodule LVLUp.Prompts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_prompt!(id), do: Repo.get!(Prompt, id)
+  def get_prompt!(id, preloads \\ []), do: Prompt |> preload(^preloads) |> Repo.get!(id)
+
+  @doc """
+  Gets a single prompt.
+
+  Raises `Ecto.NoResultsError` if the Prompt does not exist.
+
+  ## Examples
+
+      iex> get_prompt(123)
+      %Prompt{}
+
+      iex> get_prompt(456)
+      ** (Ecto.NoResultsError)
+
+  """
+  def get_prompt(id), do: Repo.get(Prompt, id)
 
   @doc """
   Creates a prompt.
@@ -70,8 +86,10 @@ defmodule LVLUp.Prompts do
   def update_prompt(%Prompt{} = prompt, attrs) do
     prompt
     |> Prompt.changeset(attrs)
-    |> Repo.update()
+    |> update_prompt()
   end
+
+  def update_prompt(%Ecto.Changeset{} = changeset), do: Repo.update(changeset)
 
   @doc """
   Deletes a prompt.

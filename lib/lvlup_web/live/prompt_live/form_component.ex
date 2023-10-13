@@ -2,6 +2,8 @@ defmodule LVLUpWeb.PromptLive.FormComponent do
   use LVLUpWeb, :live_component
 
   alias LVLUp.Prompts
+  alias LVLUp.Prompts.Services.CreatePrompt
+  alias LVLUp.Prompts.Services.UpdatePrompt
 
   @impl true
   def render(assigns) do
@@ -61,9 +63,7 @@ defmodule LVLUpWeb.PromptLive.FormComponent do
   end
 
   defp save_prompt(socket, :edit, prompt_params) do
-    IO.puts(:editttt)
-
-    case Prompts.update_prompt(socket.assigns.prompt, prompt_params) do
+    case UpdatePrompt.call(socket.assigns.prompt, prompt_params) do
       {:ok, prompt} ->
         notify_parent({:saved, prompt})
 
@@ -77,14 +77,12 @@ defmodule LVLUpWeb.PromptLive.FormComponent do
   end
 
   defp save_prompt(socket, :new, prompt_params) do
-    case Prompts.create_prompt(prompt_params) do
+    case CreatePrompt.call(prompt_params) do
       {:ok, prompt} ->
         notify_parent({:saved, prompt})
-
         put_flash(socket, :info, "Prompt created successfully")
 
       {:error, %Ecto.Changeset{} = changeset} ->
-        IO.inspect(changeset.errors)
         assign_form(socket, changeset)
     end
   end

@@ -20,10 +20,14 @@ defmodule LVLUp.DataCase do
     quote do
       alias LVLUp.Repo
 
+      require Assertions
+
+      import Assertions
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
       import LVLUp.DataCase
+      import LVLUp.Factory
     end
   end
 
